@@ -88,7 +88,7 @@ class _MatchesScreenState extends State<MatchesScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       _teamInfo(
-                        logo: match.homeTeamLogo,
+                        logo: 'assets/icons/football1.png',
                         name: match.homeTeamTitle,
                       ),
                       const SizedBox(
@@ -147,7 +147,7 @@ class _MatchesScreenState extends State<MatchesScreen> {
                         width: 10,
                       ),
                       _teamInfo(
-                        logo: match.awayTeamLogo,
+                        logo: 'assets/icons/football2.png',
                         name: match.awayTeamTitle,
                       ),
                     ],
@@ -203,8 +203,8 @@ class _MatchesScreenState extends State<MatchesScreen> {
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(50),
-          child: CachedNetworkImage(
-            imageUrl: logo,
+          child: Image.asset(
+            logo,
             width: 50,
             height: 50,
             fit: BoxFit.cover,

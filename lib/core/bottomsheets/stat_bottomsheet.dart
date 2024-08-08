@@ -92,10 +92,11 @@ class StatBotomSheet extends StatelessWidget {
                         ],
                       ).paddingSymetric(horizontal: 16),
                       const Spacer(),
-                      Row(crossAxisAlignment: CrossAxisAlignment.start,
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           _teamInfo(
-                            logo: match.homeTeamLogo,
+                            logo: 'assets/icons/football1.png',
                             name: match.homeTeamTitle,
                             contentAlignment: Alignment.topRight,
                           ),
@@ -110,7 +111,7 @@ class StatBotomSheet extends StatelessWidget {
                             ),
                           ).paddingSymetric(horizontal: 8).paddingOnly(top: 30),
                           _teamInfo(
-                            logo: match.awayTeamLogo,
+                            logo: 'assets/icons/football2.png',
                             name: match.awayTeamTitle,
                             contentAlignment: Alignment.topLeft,
                           ),
@@ -393,8 +394,8 @@ class StatBotomSheet extends StatelessWidget {
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(50),
-          child: CachedNetworkImage(
-            imageUrl: logo,
+          child: Image.asset(
+            logo,
             width: 50,
             height: 50,
             fit: BoxFit.cover,
