@@ -20,9 +20,9 @@ class FootballMatch {
 
   factory FootballMatch.fromJson(Map<String, dynamic> json) => FootballMatch(
         homeTeamTitle: json['teams']['home']['name'],
-        homeTeamLogo: json['teams']['home']['logo'],
+        homeTeamLogo: 'assets/icons/football1.png',
         awayTeamTitle: json['teams']['away']['name'],
-        awayTeamLogo: json['teams']['away']['logo'],
+        awayTeamLogo: 'assets/icons/football2.png',
         homeGoals: json['goals']['home'] ?? 0,
         awayGoals: json['goals']['away'] ?? 0,
         time: DateTime.fromMillisecondsSinceEpoch(
